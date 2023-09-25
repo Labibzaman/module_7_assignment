@@ -11,7 +11,7 @@ class CartPage extends StatelessWidget {
     int total = productNames.fold(0, (previous, current) => previous + current);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cart'),
+        title: Center(child: Text('Cart')),
       ),
       body: Container(
         child: Center(child: Text('Total Products: $total ')),
