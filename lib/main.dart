@@ -18,6 +18,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   double count =0;
+
   List<double> priceofproduct = [
     15.15,
     20.15,
@@ -57,7 +58,7 @@ class _MyAppState extends State<MyApp> {
             // This function builds each item in the list
             return ListTile(
               title: Text('Product ${index+1}'),
-              subtitle:Text('${priceofproduct[index]}'),
+              subtitle:Text("Price:\$ ${priceofproduct[index]}"),
               trailing:
               Column(
                 children: [
@@ -72,7 +73,7 @@ class _MyAppState extends State<MyApp> {
                           builder: (context){
                             return AlertDialog(
                               title:Text('Congraulations') ,
-                              content: Text('You Have bought ${counts[index]} products${index+1}  '),
+                              content: Text('You Have bought ${counts[index]} products ${index+1}  '),
                               actions: [
                                 TextButton(onPressed: (){
                                   Navigator.pop(context);
